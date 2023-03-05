@@ -24,10 +24,3 @@ export type MoviesResponse = {
   total_pages: number;
   total_results: number;
 };
-
-export type ErrorResponse = {
-  status: number;
-  message: string;
-  toString: () => string;
-  body: object;
-};
