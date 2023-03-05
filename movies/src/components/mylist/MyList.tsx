@@ -12,7 +12,7 @@ import {
   TableRow,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { useMoviesContext } from "../../context/moviesProvider";
+import { useMoviesContext } from "../../context/moviesContext";
 import { Movie } from "../../common/types";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({

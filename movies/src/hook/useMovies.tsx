@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getMovies, rateMovie, searchMovie } from "../common/api-utils";
 import { Movie, MoviesResponse } from "../common/types";
-import { useMoviesContext } from "../context/moviesProvider";
+import { useMoviesContext } from "../context/moviesContext";
 
 export const updateLocalStorage = (list: Movie[]) => {
   window.localStorage.setItem("myList", JSON.stringify(list));
