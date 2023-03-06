@@ -9,7 +9,6 @@ export const updateLocalStorage = (list: Movie[]) => {
 const useMovies = () => {
   const [listOfMovies, setListOfMovies] = useState<Movie[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedMovie, setSelectedMovie] = useState<Movie>();
   const [errorMessage, setErrorMessage] = useState("");
   const { dispatch } = useMoviesContext();
 
@@ -52,23 +51,12 @@ const useMovies = () => {
     });
   };
 
-  const selectingMovie = (movie: Movie): void => {
-    setSelectedMovie(movie);
-  };
-
-  const getSelectedMovie = (): Movie | undefined => {
-    return selectedMovie;
-  };
-
   return {
     isLoading,
     listOfMovies,
     findMovie,
     errorMessage,
-    selectedMovie,
-    selectingMovie,
     changeRating,
-    getSelectedMovie,
   };
 };
 
