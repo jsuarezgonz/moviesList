@@ -76,12 +76,14 @@ const MoviesGrid = (): JSX.Element => {
           </Container>
         </Box>
       )}
-      <Details
-        isOpen={isOpen}
-        handleClose={handleClose}
-        movie={selectedMovie}
-        changeRating={changeRating}
-      />
+      {isOpen && (
+        <Details
+          isOpen={isOpen}
+          handleClose={handleClose}
+          movie={selectedMovie}
+          changeRating={changeRating}
+        />
+      )}
     </>
   );
 };
